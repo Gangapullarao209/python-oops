@@ -1,0 +1,197 @@
+"""*************[OOPS] *****************
+1).class
+2).object
+3).inheritance
+   a.single inheritance
+   b.multi level inhritance
+   c.hierarchical inheritance
+   d.multiple inheritance
+
+4).polymorphism
+    a.compile time
+    b.run time
+
+5).Abstraction
+6).Encapsulation & Data Handling
+_____________________________________________
+     ########CLASS AND OBJECTS #######
+--------------------------------------------
+class Human:
+    def __init__(self,c,h):
+      self.color=c
+      self.height=h
+    def run(self):
+         print("Running.....")
+    def walk(self):
+         print("Walking...")
+ganga = Human("white",5.11)
+print(ganga.color,ganga.height)
+ganga.run()
+
+### SINGLE INHERITANCE ###
+class BaseClass:
+    a = 10
+    b = 100
+    def display(self):
+        print("BASE CLASS")
+class DerivedClass(BaseClass):
+    c = 20
+    d = 200
+    def show(self):
+        print("DERIVED CLASS")
+
+
+
+dobject=DerivedClass()
+print(dobject.c,dobject.d)
+dobject.show()
+print(dobject.a,dobject.b)
+dobject.display()
+-------------------------------------
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+----------------------------------------
+class Animal:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Animal("John", 36)
+
+print(p1.name)
+print(p1.age)
+----------------------------------------
+class Human :
+    color = "white"
+    height = 5.55
+    def run(self):
+        print("running...")
+    def walk(self):
+        print("walking.....")
+Ganga = Human()
+print(Ganga.color,Ganga.height)
+----------------------------------------
+class vehicle:
+    def __init__(self,model,cost):
+        self.model = model
+        self.cost = cost
+
+
+Car = vehicle("Fortuner",45)
+print(Car.model)
+print(Car.cost)
+__________________________________________
+
+
+########## INHERITANCE ####################
+-------------------------------------------
+class Baseclass:  (# without inheritance)
+    a = 10
+    b = 20
+    def display(self):
+        print("Baseclass")
+
+class Derivedclass:
+    c = 30
+    d = 40
+    def show(self):
+        print("DERIVED CLASS")
+
+
+bobject = Baseclass()
+print(bobject.a,bobject.b)
+bobject.display()
+
+dobject = Derivedclass()
+print(dobject.c,dobject.d)
+dobject.show()
+-------------------------------------------------
+/////// SINGLE INHERITANCE  //////////////////
+----------------------------------------------
+class Baseclass:  (# WITH single inheritance)
+    a = 10
+    b = 20
+    def display(self):
+        print("Baseclass")
+
+class Derivedclass(Baseclass):
+    c = 30
+    d = 40
+    def show(self):
+        print("DERIVED CLASS")
+
+
+dobject = Derivedclass()
+print(dobject.c,dobject.d)
+dobject.show()
+print(dobject.a,dobject.b)
+dobject.display()
+---------------------------------------------------
+#######  MULTI LEVEL INHERITANCE ###############
+--------------------------------------------------
+class Grandparent:
+    def gdisplay(self):
+        print("grandparent method")
+class Parent(Grandparent):
+    def pdisplay(self):
+        print("parent method")
+class Child(Parent):
+    def cdisplay(self):
+        print("child method")
+
+
+c = Child()
+c.cdisplay()
+c.pdisplay()
+c.gdisplay()
+
+p = Parent()
+p.pdisplay()
+p.gdisplay()
+p.cdisplay() # [cdisplay wii not excuited becz it has no attribute]
+--------------------------------------------------------------------
+########## HIERARCHICAL INHERITANCE #################
+--------------------------------------------------------------------
+class Parent:
+    def pdisplay(self):
+        print("PARENT CLASS")
+class Son(Parent):
+    def sdisplay(self):
+        print("SON CLASS")
+class Daughter(Parent):
+    def ddisplay(self):
+        print("DAUGHTER CLASS")
+
+#s = Son()
+#s.sdisplay()
+#s.pdisplay() 
+d = Daughter()
+d.ddisplay()
+d.pdisplay()
+--------------------------------------------------------------------------
+######  MULTIPLE INHERITANCE  ##########
+--------------------------------------------------------------------------
+class Father:
+    def fdisplay(self):
+        print("FATHER CLASS")
+class Mother:
+    def mdisplay(self):
+        print("MOTHER CLASS")
+class Child(Father,Mother):
+    def cdisplay(self):
+        print("CHILD CLASS")
+
+
+
+c = Child()
+c.cdisplay()
+c.fdisplay()
+c.mdisplay()
+________________________________________________________________________________
